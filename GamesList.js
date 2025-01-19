@@ -1,10 +1,10 @@
-const games = JSON.parse(localStorage.getItem('gamesList')) || [];  // Retrieve games from localStorage
+const games = JSON.parse(localStorage.getItem('gamesList')) || []; // Retrieve games from localStorage
 
 // Function to load games dynamically
 function loadGames() {
     const container = document.querySelector('.list'); // Selecting the container div with the class 'list'
 
-    games.forEach(game => {
+    games.forEach((game, index) => {
         // Create game div
         const gameDiv = document.createElement('div');
         gameDiv.className = game.class;
@@ -33,9 +33,25 @@ function loadGames() {
         // Append text div to game div
         gameDiv.appendChild(textDiv);
 
+        // Create and append icon
+        const icon = document.createElement('i');
+        icon.className = 'fa-solid fa-circle-minus';
+        icon.addEventListener('click', function () {
+            // Remove the game from the array and localStorage
+            removeGame(index);
+        });
+        gameDiv.appendChild(icon);
+
         // Append game div to container
         container.appendChild(gameDiv);
     });
+}
+
+// Function to remove a game by its index
+function removeGame(index) {
+    const updatedGames = games.filter((_, i) => i !== index); // Remove the game at the specified index
+    localStorage.setItem('gamesList', JSON.stringify(updatedGames)); // Update localStorage
+    window.location.reload(); // Reload the page to reflect changes
 }
 
 // Call the function after the DOM has loaded

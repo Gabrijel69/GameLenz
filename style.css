@@ -47,6 +47,7 @@ button:hover::before {
     overflow: hidden;
     background: #2c2c2c;
     height: 6rem;
+    width: 100%;
     border-bottom: 2px solid #0582CA;
   }
 .logoText {
@@ -56,13 +57,13 @@ button:hover::before {
     background-color: #2c2c2c;
     width: 10rem;
     height: 2rem;
-    padding-bottom: 2.3rem;
     text-shadow: 2px 2px 4px black;
 }
 .logo{
     width: 2rem;
     height: 2rem;
     margin-right: 0;
+    margin-bottom: 0.4rem;
     filter: invert(43%) sepia(25%) saturate(6356%) hue-rotate(178deg) brightness(86%) contrast(96%);
 }
 .rightB {
@@ -129,7 +130,9 @@ button {
     justify-content: center;
     background: #1e1e1e;
     height: 40rem;
-    padding-left: 2rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    margin-bottom: 20rem;
 }
 .title{
     display: flex;
@@ -155,6 +158,37 @@ p{
     text-shadow: 2px 2px 4px black;
 }
 /* First screen */
+/* Footer */
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+    background: #2c2c2c;
+    height: 6rem;
+    width: 100%;
+    border-top: 2px solid #0582CA;
+    margin-top: 10rem;
+    left: 0;
+    bottom: 0;
+}
+.copyright{
+    display: flex;
+    align-items: center;
+}
+.partners{
+    display: flex;
+    align-items: center;
+}
+.steam{
+    width: 4rem;
+    height: 4rem;
+}
+.playstation{
+    width: 4rem;
+    height: 4rem;
+}
+/* Footer */
 /* Sign in screen */
 .center{
     display: flex;
@@ -245,7 +279,7 @@ input[type=text], input[type=password] {
     border-radius: 8px;
     margin-bottom: 2rem;
     transition: all 250ms;
-    padding: 0.5rem 2rem 0.5rem 0.5rem;
+    padding: 0.5rem 2rem 1.5rem 0.5rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 h2{
@@ -269,13 +303,13 @@ img{
     height: 10rem;
     border-radius: 8px;
     object-fit: cover;
-    margin: 1rem 1.5rem 1rem 1rem;
+    margin: 1rem 1rem 0rem 1rem;
 }
 .fa-solid{
     color: #D9D9D9;
     font-size: 2rem;
     align-self: flex-end;
-    margin-bottom: 1rem;
+    margin-top: auto;
     margin-left: auto;
     cursor: pointer;
     transition: all 250ms;
@@ -349,9 +383,9 @@ img{
     border: 2px solid #D9D9D9;
     border-radius: 8px;
     margin: 2rem 3rem 2rem 0;
-    padding: 2rem;
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
     width: 20rem;
-    height: 25rem;
+    height: 26rem;
     transition: all 250ms;
     cursor: pointer;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -386,52 +420,3 @@ a{
     margin: 0;
 }
 /* Profile screen */
-/* .container {
-    max-width: 1536px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-} */
-  
-/* 2xl */
-/* @media (max-width: 1536px) {
-    .container {
-        max-width: 1280px;
-    }
-} */
-  
-/* xl */
-/* @media (max-width: 1280px) {
-    .container {
-      max-width: 1024px;
-    }
-} */
-  
-/* lg */
-/* @media (max-width: 1024px) {
-    .container {
-      max-width: 768px;
-    }
-} */
-  
-/* md */
-/* @media (max-width: 768px) {
-    .container {
-      max-width: 640px;
-    }
-} */
-  
-/* sm */
-/* @media (max-width: 640px) {
-    .container {
-      max-width: 475px;
-    }
-} */
-  
-/* xs */
-/* @media (max-width: 475px) {
-    .container {
-      width: 100%;
-    }
-} */

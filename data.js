@@ -62,6 +62,22 @@ const games = [
         title: "Another Crab's Treasure",
         description: "The Another Crab's Treasure is a Soulslike action-adventure video game played from a third-person perspective.",
         iconClass: "fa-solid fa-circle-plus"
+    },
+    {
+        class: "game1",
+        imgSrc: "God_of_War.jpg",
+        imgAlt: "God of War Picture",
+        title: "God of War",
+        description: "God of War is a 2018 action-adventure game developed by Santa Monica Studio and published by Sony Interactive Entertainment.",
+        iconClass: "fa-solid fa-circle-plus"
+    },
+    {
+        class: "game1",
+        imgSrc: "Animal_Crossing_New_Horizons.jpg",
+        imgAlt: "Animal Crossing: New Horizons Picture",
+        title: "Animal Crossing: New Horizons",
+        description: "Animal Crossing: New Horizons is a 2020 social simulation game developed and published by Nintendo for the Nintendo Switch; it is the fifth main entry in the Animal Crossing series.",
+        iconClass: "fa-solid fa-circle-plus"
     }
 ];
 
@@ -128,7 +144,7 @@ function addToGamesList(game) {
     if (!gamesList.some(existingGame => existingGame.title === game.title)) {  // Check if game already exists
         gamesList.push(game);  // Add new game to the list
         localStorage.setItem('gamesList', JSON.stringify(gamesList));  // Save updated list to localStorage
-        alert(`${game.title} has been added to your games list!`);
+        // alert(`${game.title} has been added to your games list!`);
     } else {
         alert(`${game.title} is already in your games list.`);
     }
